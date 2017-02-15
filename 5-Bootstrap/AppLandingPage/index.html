@@ -11,8 +11,11 @@
 
             #topContainer {
                 background-image: url("landing_page_img.jpg");
-                width: 100%;
                 background-size: cover;
+            }
+
+            .contentContainer {
+                width: 100%;
             }
 
             #topRow {
@@ -28,6 +31,22 @@
             }
             .marginTop {
                 margin-top: 30px;
+            }
+            .center {
+                text-align: center;
+            }
+            .title {
+                margin-top: 100px;
+                font-size: 300%;
+            }
+            #footer {
+                background-color: #B0D1FB;
+            }
+            .marginBottom {
+                margin-bottom: 30px;
+            }
+            .appstoreImage {
+                width: 250px;
             }
         </style>
     </head>
@@ -62,11 +81,11 @@
             </div>
         </div>
 
-        <div id="topContainer" class="container">
+        <div id="topContainer" class="container contentContainer">
             <div class="row">
                 <div id="topRow" class="col-md-6 col-md-offset-3">
-                    <h1>My Awesome App</h1>
-                    <p class="lead">This is why should download this fantastic app.</p>
+                    <h1 class="marginTop">My Awesome App</h1>
+                    <p class="lead marginTop">This is why should download this fantastic app.</p>
                     <p>Some more information about the app. You can go into a little more detail here if you want to.</p>
                     <p class="bold">Interested? Join our mailing list</p>
                     <form class="marginTop" action="index.html" method="post">
@@ -80,12 +99,53 @@
             </div>
         </div>
 
+        <div class="container contentContainer">
+            <div class="row center">
+                <h1 class="title">Why This App is Awesome</h1>
+                <p class="lead">Summary of the app's awesomeness</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 marginTop">
+                    <h2><span class="glyphicon glyphicon-music"></span>Header</h2>
+                    <p>
+                        A brief description of one of the best features of your. Maybe a little text. A brief description of one of the best features of your. Maybe a little text. A brief description of one of the best features of your. Maybe a little text.
+                    </p>
+                    <button class="btn btn-success marginTop" type="button" name="button">Sign Up!</button>
+                </div>
+
+                <div class="col-md-4 marginTop">
+                    <h2><span class="glyphicon glyphicon-off"></span>Header</h2>
+                    <p>
+                        A brief description of one of the best features of your. Maybe a little text. A brief description of one of the best features of your. Maybe a little text. A brief description of one of the best features of your. Maybe a little text.
+                    </p>
+                    <button class="btn btn-success marginTop" type="button" name="button">Sign Up!</button>
+                </div>
+
+                <div class="col-md-4 marginTop">
+                    <h2><span class="glyphicon glyphicon-pencil"></span>Header</h2>
+                    <p>
+                        A brief description of one of the best features of your. Maybe a little text. A brief description of one of the best features of your. Maybe a little text. A brief description of one of the best features of your. Maybe a little text.
+                    </p>
+                    <button class="btn btn-success marginTop" type="button" name="button">Sign Up!</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer" class="container contentContainer">
+            <div class="row center">
+                <h1 class="title">Download the App!</h1>
+                <p class="lead">Really, why should I download this app?</p>
+                <p><img src="App-Store-Icon.png" class="appstoreImage marginTop" alt="" /></p>
+            </div>
+        </div>
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script type="text/javascript">
-            $("#topContainer").css("height", $(window).height());
+            $(".contentContainer").css("min-height", $(window).height());
         </script>
     </body>
 </html>
